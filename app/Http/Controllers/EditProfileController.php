@@ -6,13 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 
-class ProfileController extends Controller
+class EditProfileController extends Controller
 {
-
     public function index()
     {
         $user = Auth::user();
-        return view('profile', [
+        return view('editprofile', [
             'name'=>$user->name,
             'email'=>$user->email,
             'height'=>$user->height,
@@ -25,7 +24,5 @@ class ProfileController extends Controller
             'nationality'=>$user->nationality,
             'level'=>$user->level,
             'looking_for_trainer'=>$user->looking_for_trainer]);
-
     }
-
 }

@@ -12,7 +12,11 @@
 */
 
 
-Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::get('/editprofile', 'EditProfileController@index')->name('editprofile');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
