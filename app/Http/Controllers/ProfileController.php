@@ -9,10 +9,13 @@ use App\User;
 class ProfileController extends Controller
 {
 
-    public function index()
+    public function index($id)
     {
-        $user = Auth::user();
+
+        $owner = Auth::user();
+        $user = User::find($id);
         return view('profile', [
+            'id'=>$user->id,
             'name'=>$user->name,
             'email'=>$user->email,
             'height'=>$user->height,
@@ -24,7 +27,8 @@ class ProfileController extends Controller
             'avatar'=>$user->avatar,
             'nationality'=>$user->nationality,
             'level'=>$user->level,
-            'looking_for_trainer'=>$user->looking_for_trainer]);
+            'looking_for_trainer'=>$user->looking_for_trainer,
+            'owner' => $owner]);
 
     }
 

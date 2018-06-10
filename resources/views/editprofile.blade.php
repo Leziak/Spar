@@ -11,6 +11,7 @@
         Avatar: <input type="text" name="avatar" value="{{$contact}}"><br>
         Nationality: <input type="text" name="nationality" value="{{$nationality}}"><br>
         Looking for trainer: Yes <input type="radio" name="looking_for_trainer" value="yes"> No <input type="radio" name="looking_for_trainer" value="no"><br>
+        Submit: <input type="submit">
     </form>
 
 @endsection

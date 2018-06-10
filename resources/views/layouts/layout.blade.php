@@ -12,5 +12,6 @@
     <h1>This is the layout page!</h1>
     @yield('profile')
     @yield('editprofile')
+    @yield('profiles')
 </body>
 </html>

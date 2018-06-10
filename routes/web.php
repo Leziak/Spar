@@ -14,7 +14,8 @@
 
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::get('/profile/{id}', 'ProfileController@index')->name('profile');
+Route::get('/profiles', 'ProfilesController@index')->name('profiles');
 Route::get('/editprofile', 'EditProfileController@index')->name('editprofile');
 
 Auth::routes();
